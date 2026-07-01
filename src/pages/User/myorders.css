@@ -1,0 +1,152 @@
+/* Background */
+.orders-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(
+    135deg,
+    #eef2ff,
+    #f8fafc,
+    #e0f2fe
+  );
+}
+
+/* Heading */
+.orders-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #0f172a;
+  position: relative;
+}
+
+.orders-title::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #06b6d4);
+  display: block;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+/* Card */
+.order-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  height: 100%;
+}
+
+.order-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(37,99,235,0.18);
+}
+
+/* Order ID */
+.order-card h5 {
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Order Info */
+.order-card p {
+  color: #475569;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Status Badge */
+.order-card p:nth-child(3) {
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Buttons Container */
+.order-card .row {
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* View Button */
+.view-btn {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37,99,235,0.35);
+}
+
+/* Invoice Button */
+.invoice-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #10b981,
+    #059669
+  );
+  transition: 0.3s;
+}
+
+.invoice-btn:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16,185,129,0.35);
+}
+
+/* Loading & Empty */
+.orders-page p {
+  text-align: center;
+  font-size: 18px;
+  color: #64748b;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .orders-title {
+    font-size: 2rem;
+  }
+
+  .order-card {
+    padding: 20px;
+  }
+
+  .order-card .row {
+    flex-direction: column;
+  }
+
+  .view-btn,
+  .invoice-btn {
+    width: 100%;
+  }
+}

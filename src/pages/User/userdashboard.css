@@ -1,0 +1,292 @@
+/* USER DASHBOARD */
+
+.ud-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top right, rgba(59,130,246,0.18), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(168,85,247,0.18), transparent 30%),
+    linear-gradient(135deg, #020617, #0f172a, #111827);
+}
+
+/* HEADER */
+
+.ud-header-card {
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+  border-radius: 28px;
+
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+
+  margin-bottom: 40px;
+}
+
+.ud-header-card::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: -80px;
+  right: -80px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(59,130,246,0.25),
+    transparent 70%
+  );
+}
+
+.ud-header-card::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: -60px;
+  bottom: -60px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(168,85,247,0.18),
+    transparent 70%
+  );
+}
+
+.ud-greeting {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ud-name {
+  font-size: 38px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.ud-email {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.ud-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 16px;
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  background: rgba(56,189,248,0.12);
+  color: #38bdf8;
+
+  border: 1px solid rgba(56,189,248,0.25);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.ud-section-title {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   MENU CARDS
+========================= */
+
+.ud-card {
+  position: relative;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+
+  padding: 24px;
+
+  height: 100%;
+  cursor: pointer;
+
+  transition: all .35s ease;
+
+  overflow: hidden;
+}
+
+.ud-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    transparent
+  );
+
+  opacity: 0;
+  transition: .4s;
+}
+
+.ud-card:hover::before {
+  opacity: 1;
+}
+
+.ud-card:hover {
+  transform: translateY(-10px);
+
+  border-color: var(--card-color);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.25),
+    0 0 20px rgba(59,130,246,0.12);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.ud-card-icon {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+
+  background: var(--card-bg);
+
+  margin-bottom: 18px;
+
+  transition: .3s;
+}
+
+.ud-card:hover .ud-card-icon {
+  transform: scale(1.12) rotate(5deg);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.ud-card-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.ud-card-desc {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ud-arrow {
+  margin-top: 18px;
+
+  font-size: 22px;
+  color: var(--card-color);
+
+  transition: .3s;
+}
+
+.ud-card:hover .ud-arrow {
+  transform: translateX(8px);
+}
+
+/* =========================
+   STATS CARD
+========================= */
+
+.ud-stat-card {
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(16px);
+
+  border-radius: 20px;
+
+  padding: 22px;
+
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.ud-stat-number {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+}
+
+.ud-stat-label {
+  font-size: 13px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .ud-page {
+    padding: 20px 15px;
+  }
+
+  .ud-header-card {
+    padding: 25px;
+  }
+
+  .ud-name {
+    font-size: 28px;
+  }
+
+  .ud-card {
+    padding: 20px;
+  }
+
+  .ud-card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .ud-card-title {
+    font-size: 16px;
+  }
+
+  .ud-card-desc {
+    font-size: 13px;
+  }
+}

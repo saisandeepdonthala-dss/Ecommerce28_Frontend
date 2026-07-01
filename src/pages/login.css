@@ -1,0 +1,376 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* ==========================
+   Login Page
+========================== */
+
+.login-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+    background:linear-gradient(
+        135deg,
+        #1e1e1e,
+        #2d2d2d,
+        #444444
+    );
+}
+
+/* ==========================
+   Login Card
+========================== */
+
+.login-card{
+
+    width:100%;
+    max-width:430px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35);
+
+    animation:fadeIn .7s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.login-title{
+    text-align:center;
+    color:#fff;
+    font-size:32px;
+    font-weight:700;
+}
+
+.login-subtitle{
+    text-align:center;
+    color:#d1d5db;
+    margin-top:8px;
+    margin-bottom:35px;
+    font-size:15px;
+}
+
+/* ==========================
+   Labels
+========================== */
+
+.form-label{
+    color:#ffffff;
+    font-weight:500;
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.form-control{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:13px;
+
+    background:#ffffff;
+
+    transition:.3s;
+}
+
+.form-control:focus{
+
+    border:none;
+
+    box-shadow:0 0 0 3px rgba(249,115,22,.35);
+
+}
+
+/* ==========================
+   Password Icon
+========================== */
+
+.input-group-text{
+
+    border:none;
+
+    background:#f97316 !important;
+
+    color:#fff;
+
+    border-radius:0 12px 12px 0;
+
+    transition:.3s;
+}
+
+.input-group-text:hover{
+
+    background:#ea580c !important;
+
+}
+
+/* ==========================
+   Radio Buttons
+========================== */
+
+.form-check{
+
+    margin-right:25px;
+
+}
+
+.form-check-label{
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+.form-check-input{
+
+    cursor:pointer;
+
+}
+
+.form-check-input:checked{
+
+    background-color:#f97316;
+
+    border-color:#f97316;
+
+}
+
+/* ==========================
+   Forgot Password
+========================== */
+
+.forgot-link{
+
+    color:#fdba74;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.forgot-link:hover{
+
+    color:#ffffff;
+
+}
+
+/* ==========================
+   Login Button
+========================== */
+
+.login-btn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    background:#f97316;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.login-btn:hover{
+
+    background:#ea580c;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(249,115,22,.35);
+
+}
+
+/* ==========================
+   Register
+========================== */
+
+.register-link{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.register-link a{
+
+    color:#fdba74;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.register-link a:hover{
+
+    color:#fff;
+
+}
+
+/* ==========================
+   Toast
+========================== */
+
+.custom-toast{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    min-width:320px;
+
+    z-index:9999;
+
+    border-radius:12px;
+
+    animation:slideIn .4s ease;
+
+}
+
+@keyframes slideIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(100%);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================
+   Placeholder
+========================== */
+
+::placeholder{
+
+    color:#9ca3af;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+.login-card{
+
+    padding:30px;
+
+}
+
+.login-title{
+
+    font-size:28px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.login-card{
+
+    padding:25px 20px;
+
+}
+
+.login-title{
+
+    font-size:24px;
+
+}
+
+.login-subtitle{
+
+    font-size:14px;
+
+}
+
+.login-btn{
+
+    padding:12px;
+
+}
+
+.custom-toast{
+
+    width:90%;
+
+    right:5%;
+
+    min-width:auto;
+
+}
+
+}
