@@ -22,8 +22,8 @@ import UserProduce from './pages/User/UserProduce'
 import Payment from './pages/User/Payment'
 import MyOrders from "./pages/User/MyOrders";
 import OrderDetails from "./pages/User/OrderDetails";
-import ResetPassword from "./pages/User/ForgotPassword";
 import ForgotPassword from "./pages/User/ForgotPassword";
+import ResetPassword from "./pages/User/ResetPassword";
 import AdminForgotPassword from "./pages/AdminForgotPassword";
 import AdminResetPassword from "./pages/AdminResetPassword";
 
