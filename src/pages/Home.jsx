@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 
 function Home() {
@@ -167,41 +168,49 @@ function Home() {
       <footer className="footer">
         <div className="container">
           <div className="row">
-
-            <div className="col-md-4 mb-4">
-              <h5>ShopEase</h5>
-              <p>
-                Best online shopping platform for fashion, electronics,
-                accessories, and more.
-              </p>
+            <div className="col-md-4">
+              <div className="footer-section">
+                <h5>ShopEase</h5>
+                <p className="footer-desc">
+                  Best online shopping platform for fashion, electronics,
+                  accessories, and more.
+                </p>
+              </div>
             </div>
 
-            <div className="col-md-4 mb-4">
-              <h5>Quick Links</h5>
-
-              <ul>
-                <li>Home</li>
-                <li>Products</li>
-                <li>Cart</li>
-                <li>Contact</li>
-              </ul>
+            <div className="col-md-4">
+              <div className="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/products">Products</Link></li>
+                  <li><Link to="/cart">Cart</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
+                </ul>
+              </div>
             </div>
 
-            <div className="col-md-4 mb-4">
-              <h5>Contact</h5>
-
-              <p>Email: support@shopease.com</p>
-              <p>Phone: +91 9810231998</p>
-              <p>Location: India</p>
+            <div className="col-md-4">
+              <div className="footer-section">
+                <h5>Contact</h5>
+                <div className="contact-pills">
+                  <p>Email: support@shopease.com</p>
+                  <p>Phone: +91 9810231998</p>
+                  <p>Location: India</p>
+                </div>
+              </div>
             </div>
-
           </div>
+        </div>
+      </footer>
 
+      <div className="footer-bottom">
+        <div className="container">
           <div className="copyright">
             © 2026 ShopEase. All Rights Reserved .
           </div>
         </div>
-      </footer>
+      </div>
 
     
      </>

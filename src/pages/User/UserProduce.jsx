@@ -110,16 +110,20 @@ function UserProduce() {
           <p>Discover great products at amazing prices</p>
         </div>
 
-        <div className="up-filter-bar">
-  {categories.map(cat => (
-    <button
-      key={cat.value}
-      className={`up-cat-btn ${activeCategory === cat.value ? "active" : ""}`}
-      onClick={() => filterByCategory(cat.value)}
-    >
-      {cat.label}
-    </button>
-  ))}
+       <div className="up-filter-bar">
+  <div className="up-filter-container">
+    {categories.map((cat) => (
+      <button
+        key={cat.value}
+        className={`up-cat-btn ${
+          activeCategory === cat.value ? "active" : ""
+        }`}
+        onClick={() => filterByCategory(cat.value)}
+      >
+        {cat.label}
+      </button>
+    ))}
+  </div>
 </div>
 
         <div className="up-content">

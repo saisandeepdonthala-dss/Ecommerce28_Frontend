@@ -324,23 +324,83 @@
 ========================================== */
 
 .footer{
-  background:#010409;
+  background: linear-gradient(180deg, #071523 0%, #071422 100%);
 
-  padding:80px 20px 30px;
+  padding:2px 20px 0;
+  margin:0;
 
-  border-top:
-    1px solid rgba(255,255,255,.06);
+  border-top: 1px solid rgba(255,255,255,.04);
+  border-bottom: 2px solid rgba(255,255,255,.08);
+}
+
+.footer .row{
+  margin:0;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap:32px;
+}
+
+.footer .col-md-4{
+  width:auto;
+  padding:0 16px;
+  margin:0;
+}
+
+@media(max-width:1200px){
+  .footer .row{
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media(max-width:768px){
+  .footer .row{
+    grid-template-columns:1fr;
+  }
+
+  .footer .col-md-4{
+    padding:0 12px;
+  }
+}
+
+.footer-bottom{
+  background: linear-gradient(180deg, #071422 0%, #051018 100%);
+  padding:8px 20px 12px;
+  margin:0;
+  border-top:none;
+  min-height:auto;
+  line-height:1.4;
+}
+
+.footer-bottom .container{
+  max-width:960px;
+  margin:0 auto;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:auto;
+}
+
+.footer-section{
+  padding:0;
+  margin:0;
 }
 
 .footer-content{
-  max-width:1200px;
-  margin:auto;
+  max-width:960px;
+  margin:0 auto;
+}
+
+.footer .container{
+  max-width:960px;
+  margin:0 auto;
 }
 
 .footer h5{
   color:#38bdf8;
 
-  margin-bottom:18px;
+  margin-bottom:12px;
+  margin-top:0;
 
   font-weight:800;
 }
@@ -348,15 +408,18 @@
 .footer p,
 .footer li{
   color:#94a3b8;
+  margin:0;
 }
 
 .footer ul{
   list-style:none;
   padding:0;
+  margin:0;
 }
 
 .footer li{
-  margin-bottom:12px;
+  margin-bottom:10px;
+  margin-top:0;
 
   transition:.3s;
   cursor:pointer;
@@ -368,19 +431,67 @@
   transform:translateX(6px);
 }
 
+/* ShopEase description card */
+.footer-desc{
+  background:#ffffff;
+  color:#0b1320;
+  padding:14px 18px;
+  border-radius:12px;
+  font-size:16px;
+  line-height:1.6;
+  box-shadow:0 8px 24px rgba(2,6,23,0.35);
+  display:block;
+  margin:0;
+}
+
 .copyright{
   text-align:center;
-
-  margin-top:40px;
-
-  padding-top:20px;
-
-  border-top:
-    1px solid rgba(255,255,255,.08);
-
   color:#64748b;
+  font-size:12px;
+  margin:0;
+  padding:0;
+  line-height:1.4;
+  white-space:nowrap;
+}
 
-  font-size:13px;
+/* Link styling for footer links */
+.footer-section ul li a{
+  color:#94a3b8;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-section ul li a:hover{
+  color:#38bdf8;
+  text-decoration:underline;
+}
+
+/* Contact pills styling */
+.contact-pills p{
+  background:#ffffff;
+  color:#0b1320;
+  display:block;
+  padding:14px 18px;
+  border-radius:10px;
+  margin-bottom:12px;
+  font-size:14px;
+  box-shadow:0 6px 16px rgba(2,6,23,0.3);
+}
+
+.contact-pills p:last-child{
+  margin-bottom:0;
+}
+
+/* Responsive footer adjustments */
+@media(max-width:768px){
+  .footer-section{
+    padding:0;
+    margin-bottom:30px;
+  }
+
+  .footer-desc{
+    font-size:14px;
+  }
 }
 
 /* ==========================================
